@@ -3,6 +3,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
+  mode: 'development',
   output: {
     filename: 'js/[name].[chunkhash:8].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -18,6 +19,10 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader？module', 'postcss-loader'],
       }
     ]
   },

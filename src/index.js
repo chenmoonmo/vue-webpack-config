@@ -1,5 +1,7 @@
 import Vue from 'vue'
-const App = import(/* webpackChunkName: "group-foo" */ './App.vue')
+import App from './App.vue'
+import './style/index.css'
+
 
 new Vue({
   render: h => h(App)
