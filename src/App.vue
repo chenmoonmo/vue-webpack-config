@@ -2,11 +2,11 @@
   <div class="container">
     <div>hello world</div>
     <div>hello world</div>
+    <img src="./assets/test.png" alt />
   </div>
 </template>
 
 <script>
-import 'core-js/stable/object/assign'
 export default {
   mounted() {
     console.log(process.env.NODE_ENV)
